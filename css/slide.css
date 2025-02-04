@@ -1,0 +1,139 @@
+.ftco-section {
+    padding: 70px 0;
+  }
+  
+  .certificates-container {
+    text-align: center;
+    width: 100%; /* Adjusted to fit mobile screens */
+  }
+  
+  .certificates-container h2 {
+    font-size: 2.5rem; /* Reduced font size for smaller screens */
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .certificates-wrapper {
+    position: relative;
+    width: 90%; /* Adjusted width for smaller screens */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .certificates-box {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+    background-color: black;
+    width: 100%; /* Ensures proper scaling for mobile */
+  }
+  
+  .certificates-slide {
+    flex: 0 0 calc(50% - 15px); /* Displays 2 slides on medium screens */
+    margin: 0 5px; /* Adjusted spacing for smaller screens */
+    box-sizing: border-box;
+    padding: 20px; /* Reduced padding for mobile view */
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificates-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .certificates-slide img {
+    width: 100%;
+    max-width: 300px; /* Reduced image size for mobile screens */
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+  }
+  
+  .certificates-slide h2,
+  .certificates-slide h3,
+  .certificates-slide h4 {
+    font-size: 1.2rem; /* Adjusted font size for better readability */
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px; /* Reduced arrow size for smaller screens */
+    height: 50px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.2);
+  }
+  
+  .arrow.left {
+    left: -20px;
+  }
+  
+  .arrow.right {
+    right: -20px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .certificates-slide {
+      flex: 0 0 100%; /* Display one slide at a time on small screens */
+      margin: 0 10px;
+    }
+  
+    .certificates-wrapper {
+      width: 100%; /* Full width for smaller devices */
+    }
+  
+    .certificates-slide img {
+      max-width: 100%; /* Image scales to fit container */
+    }
+  
+    .arrow.left {
+      left: 10px;
+    }
+  
+    .arrow.right {
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certificates-container h2 {
+      font-size: 2rem; /* Smaller font for mobile */
+    }
+  
+    .certificates-slide {
+      padding: 15px; /* Reduced padding for very small devices */
+    }
+  
+    .arrow {
+      width: 40px; /* Smaller arrows for compact view */
+      height: 40px;
+    }
+  }
+  
